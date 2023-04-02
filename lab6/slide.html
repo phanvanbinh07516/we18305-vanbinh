@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<script>
+var arr_hinh=[
+    "imgg/nui1.jpg",
+    "imgg/nui2.jpg",
+    "imgg/nui3.jpg"
+];
+var arr_mota=[
+    "Ảnh núi 1",
+    "Ảnh núi 2",
+    "Ảnh núi 3"
+];
+var arr_vitri=[
+    "1/1",
+    "1/2",
+    "1/3"
+];
+var arr_radio=[
+
+]
+
+</script>
+<body>
+    <div id="slide">
+        <img src="imgg/nui1.jpg" id="hinh" onmouseover="overimg()" onmouseout="outimg()">
+        <b id="mota">Ảnh núi 1</b>
+        <b id="vitri">1/1</b>
+        <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+        <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+        <div id="radio">
+            <input type="radio" name="radio-sl" id="radio1">
+            <input type="radio" name="radio-sl" id="radio2">
+            <input type="radio" name="radio-sl" id="radio3">
+        </div>
+    </div>
+
+</body>
+<script>
+    var index=0;
+    function prev(){
+        index--;
+        if(index<-0)index=arr_hinh.length-1 ;
+        document.getElementById("hinh").src=arr_hinh[index];
+        document.getElementById("mota").innerText=arr_mota[index];
+        document.getElementById("vitri").innerText=arr_vitri[index]
+
+    }
+    function next(){
+        index++;
+        if(index==arr_hinh.length) index=0;
+        document.getElementById("hinh").src=arr_hinh[index];
+        document.getElementById("mota").innerText=arr_mota[index];
+        document.getElementById("vitri").innerText=arr_vitri[index]
+    }
+function overimg(){
+    document.getElementById("hinh").src="imgg/nui1.jpg";
+    document.getElementById("hinh").style.border = "3px #F00 solid"
+
+}
+function outimg(){
+    document.getElementById("hinh").src="imgg/nui1.jpg";
+    document.getElementById("hinh").style.border = "0"
+
+    
+}
+
+</script>
+</html>
