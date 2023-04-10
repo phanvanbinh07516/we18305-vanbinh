@@ -34,28 +34,22 @@ var arr_radio=[
         <img src="imgg/nui1.jpg" id="hinh" onmouseover="overimg()" onmouseout="outimg()">
         <b id="mota">Ảnh núi 1</b>
         <b id="vitri">1/1</b>
-        <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+        <i class="fa fa-chevron-circle-left" onclick="black()"></i>
         <i class="fa fa-chevron-circle-right" onclick="next()"></i>
-        <div id="radio">
-            <input type="radio" name="radio-sl" id="radio1">
-            <input type="radio" name="radio-sl" id="radio2">
-            <input type="radio" name="radio-sl" id="radio3">
-        </div>
     </div>
-
 </body>
 <script>
     var index=0;
-    function prev(){
+    function black(){
         index--;
         if(index<-0)index=arr_hinh.length-1 ;
         document.getElementById("hinh").src=arr_hinh[index];
         document.getElementById("mota").innerText=arr_mota[index];
-        document.getElementById("vitri").innerText=arr_vitri[index]
+        document.getElementById("vitri").innerText=arr_vitri[index]0
 
     }
     function next(){
-        index++;
+        index++;    
         if(index==arr_hinh.length) index=0;
         document.getElementById("hinh").src=arr_hinh[index];
         document.getElementById("mota").innerText=arr_mota[index];
@@ -70,6 +64,9 @@ function outimg(){
     document.getElementById("hinh").src="imgg/nui1.jpg";
     document.getElementById("hinh").style.border = "0"
 
+    
+}
+function abc(){
     
 }
 
