@@ -68,7 +68,7 @@
     transition: 0,4s;
 }
 #banner .box-left button:hover{
-    background: orange;
+    background: orangered;
 }
 
 #wp-products{
@@ -83,16 +83,42 @@
     font-size: 30px;
     color: darkgray;
 }
-#list-products {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-wrap: wrap;
+#wp-products .list{
+    width: 1000px;
+    
 }
-#list-products .item{
-    width: 290px;
-    height: 374px;
-    background: #1d1a1a;
-    border-radius: 10px;
-    margin-bottom: 50px;
+#wp-products .list2{
+    width: 910px;
+}
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color:black;
+}
+.box{
+   margin-top: 50px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+}
+.box2{
+    margin-top: 20px;
+}
+.box1{
+    color: red;
+}
+.conten{
+    width: 900px;
+
+}
+#blog{
+    text-align: center;
+}
+
+.form{
+    width: 1200px;
+    height: 300px;
+    text-align: center;
+    
 }
